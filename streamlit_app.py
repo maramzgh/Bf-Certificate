@@ -3,7 +3,7 @@ import base64
 
 # Page configuration
 st.set_page_config(
-    page_title="A Special Surprise for Kouki 💝",
+    page_title="A Special Surprise for Koukiti  ",
     page_icon="💝",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -83,7 +83,7 @@ def show_certificate():
     st.session_state.show_certificate = True
 
 def increment_nope():
-    st.session_state.nope_count += 1
+    st.session_state.nope_count += 8
     messages = [
         "Nice try! 😏",
         "Can't escape! 💕",
