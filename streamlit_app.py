@@ -158,7 +158,7 @@ else:
     )
     
     # --- snoww
-    st.snow()
+    st.balloons()
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         if st.button("🔄 See it again! 🤍", key="reset_btn", use_container_width=True):
