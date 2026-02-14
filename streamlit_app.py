@@ -95,7 +95,7 @@ def increment_nope():
 # Main app
 if not st.session_state.show_certificate:
     st.markdown("# Ready for your award? 🤍")
-    st.markdown("### You've been an amazing boyfriend...")
+    st.markdown("### You've been an amazing partner...")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -111,12 +111,12 @@ if not st.session_state.show_certificate:
             st.rerun()
     
     with col3:
-        nope_text = "Nope 😒"
-        if st.session_state.nope_count > 3:
+        nope_text = "Leeee 😒"
+        if st.session_state.nope_count > 1:
             nope_text = "Not clicking! 😤"
-        if st.session_state.nope_count > 6:
-            nope_text = "Stop it! 😠"
-        if st.session_state.nope_count > 10:
+        if st.session_state.nope_count > 1:
+            nope_text = "YeZZzzzzii! 😠"
+        if st.session_state.nope_count > 1:
             nope_text = "Fineeee... 😒"
         
         if st.button(nope_text, key="nope_btn", use_container_width=True):
@@ -124,7 +124,7 @@ if not st.session_state.show_certificate:
             st.rerun()
 
 else:
-    st.markdown("# 💗 CONGRATULATIONS!")
+    st.markdown("# 💗!مبرووووووك")
     st.markdown("### Here's your award nawartyy!💗 ")
     
     st.markdown("<br>", unsafe_allow_html=True)
