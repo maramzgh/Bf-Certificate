@@ -13,7 +13,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main {
-        background: linear-gradient(135deg, #FFD6E8 0%, #E6E6FA 50%, #FFE4E1 100%);
+        background: linear-gradient(135deg, #FFEBF0 0%, #FFD6E8 50%, #FFE4E1 100%);
     }
     
     #MainMenu {visibility: hidden;}
@@ -124,19 +124,35 @@ if not st.session_state.show_certificate:
             st.rerun()
 
 else:
-    st.markdown("# 💗!مبرووووووك")
-    st.markdown("### Here's your award nawartyy!💗 ")
-    
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    st.markdown(
-        f'<div class="certificate-container">'
-        f'<img src="data:image/png;base64,{CERTIFICATE_DATA}" alt="Certificate of Excellence">'
-        f'</div>',
+   st.markdown(
+        """
+        <div id="balloon-container"></div>
+        <script>
+        const colors = ['#FFB6C1', '#FFD1DC', '#E6E6FA', '#FFE4E1', '#FFF0F5']; // pastel colors
+        for (let i = 0; i < 30; i++) {
+            let balloon = document.createElement('div');
+            balloon.style.width = '30px';
+            balloon.style.height = '40px';
+            balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
+            balloon.style.borderRadius = '50%';
+            balloon.style.position = 'absolute';
+            balloon.style.left = Math.random() * window.innerWidth + 'px';
+            balloon.style.top = '100%';
+            balloon.style.zIndex = 9999;
+            balloon.style.opacity = 0.8;
+            balloon.style.animation = 'floatUp 7s linear forwards';
+            document.body.appendChild(balloon);
+        }
+        </script>
+        <style>
+        @keyframes floatUp {
+            0% { top: 100%; transform: translateY(0); }
+            100% { top: -10%; transform: translateY(-100vh); }
+        }
+        </style>
+        """,
         unsafe_allow_html=True
     )
-    
-    st.balloons()
     
     st.markdown("<br><br>", unsafe_allow_html=True)
     
