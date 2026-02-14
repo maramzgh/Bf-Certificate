@@ -139,9 +139,9 @@ if not st.session_state.show_certificate:
         if st.session_state.nope_count > 2:
             nope_text = "yess testannna fik... 😒"
         if st.session_state.nope_count > 3:
-            nope_text = "pLEaAAAse!😒"
+            nope_text = "pLEaAAAse!🥺"
         if st.session_state.nope_count > 4:
-            nope_text = "Koukiii...😠"
+            nope_text = "Koukiii...😭"
         
         if st.button(nope_text, key="nope_btn", use_container_width=True):
             increment_nope()
