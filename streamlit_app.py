@@ -114,8 +114,8 @@ def increment_nope():
 
 # Main app
 if not st.session_state.show_certificate:
-    st.markdown("# Ready for your award? 🤍")
-    st.markdown("### You've been an amazing partner...")
+    st.markdown("# Ready for your award? ")
+    st.markdown("### You've been an amazing partner...🤍")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
