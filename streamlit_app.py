@@ -134,9 +134,9 @@ if not st.session_state.show_certificate:
         nope_text = "Leeee 😒"
         if st.session_state.nope_count > 1:
             nope_text = "Not clicking! 😤"
-        if st.session_state.nope_count > 1:
+        if st.session_state.nope_count > 2:
             nope_text = "YeZZzzzzii! 😠"
-        if st.session_state.nope_count > 1:
+        if st.session_state.nope_count > 3:
             nope_text = "Fineeee... 😒"
         
         if st.button(nope_text, key="nope_btn", use_container_width=True):
@@ -145,8 +145,8 @@ if not st.session_state.show_certificate:
 
 
 else:
-    st.markdown("# 💗!مبرووووووك")
-    st.markdown("### You've got an AWaaARddd ye nawartyy!💗 ")
+    st.markdown("# 🩷!مبرووووووك")
+    st.markdown("### You've got an AWaaARddd ye nawartyy!✨")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
