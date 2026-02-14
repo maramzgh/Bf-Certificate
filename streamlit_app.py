@@ -132,12 +132,16 @@ if not st.session_state.show_certificate:
     
     with col3:
         nope_text = "Leeee 😒"
-        if st.session_state.nope_count > 1:
+        if st.session_state.nope_count > 0:
             nope_text = "Not clicking! 😤"
-        if st.session_state.nope_count > 2:
+        if st.session_state.nope_count > 1:
             nope_text = "YeZZzzzzii! 😠"
+        if st.session_state.nope_count > 2:
+            nope_text = "yess testannna fik... 😒"
         if st.session_state.nope_count > 3:
-            nope_text = "Fineeee... 😒"
+            nope_text = "pLEaAAAse!😒"
+        if st.session_state.nope_count > 4:
+            nope_text = "Koukiii...😠"
         
         if st.button(nope_text, key="nope_btn", use_container_width=True):
             increment_nope()
