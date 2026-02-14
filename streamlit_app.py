@@ -137,45 +137,8 @@ else:
         unsafe_allow_html=True
     )
     
-    # --- Pastel balloons container ---
-    st.markdown(
-        """
-        <div id="balloon-container" style="position: relative; width: 100%; height: 500px; overflow: visible;"></div>
-        <script>
-        const container = document.getElementById('balloon-container');
-        const colors = ['#FFB6C1', '#FFD1DC', '#E6E6FA', '#FFE4E1', '#FFF0F5']; // pastel colors
-        for (let i = 0; i < 30; i++) {
-            let balloon = document.createElement('div');
-            balloon.style.width = '30px';
-            balloon.style.height = '40px';
-            balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
-            balloon.style.borderRadius = '50%';
-            balloon.style.position = 'absolute';
-            balloon.style.left = Math.random() * (container.offsetWidth - 30) + 'px';
-            balloon.style.top = container.offsetHeight + 'px';
-            balloon.style.opacity = 0.8;
-            balloon.style.zIndex = 9999;
-            balloon.style.animation = `floatUp 7s linear forwards`;
-            container.appendChild(balloon);
-        }
-        </script>
-        <style>
-        @keyframes floatUp {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-600px); } /* float above container */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    
-
-    
-    st.markdown("<br><br>", unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns([1, 1, 1])
-
-    
+    # --- snoww
+    st.snows()
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         if st.button("🔄 See it again! 🤍", key="reset_btn", use_container_width=True):
