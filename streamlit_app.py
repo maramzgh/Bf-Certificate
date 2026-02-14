@@ -123,8 +123,22 @@ if not st.session_state.show_certificate:
             increment_nope()
             st.rerun()
 
+
 else:
-   st.markdown(
+    st.markdown("# 💗!مبرووووووك")
+    st.markdown("### Here's your award nawartyy!💗 ")
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    st.markdown(
+        f'<div class="certificate-container">'
+        f'<img src="data:image/png;base64,{CERTIFICATE_DATA}" alt="Certificate of Excellence">'
+        f'</div>',
+        unsafe_allow_html=True
+    )
+    
+    # --- Custom pastel balloons ---
+    st.markdown(
         """
         <div id="balloon-container"></div>
         <script>
@@ -155,6 +169,9 @@ else:
     )
     
     st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns([1, 1, 1])
+
     
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
