@@ -126,7 +126,7 @@ if not st.session_state.show_certificate:
 
 else:
     st.markdown("# 💗!مبرووووووك")
-    st.markdown("### Here's your award nawartyy!💗 ")
+    st.markdown("### You've got an AWaaARddd ye nawartyy!💗 ")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -137,11 +137,12 @@ else:
         unsafe_allow_html=True
     )
     
-    # --- Custom pastel balloons ---
+    # --- Pastel balloons container ---
     st.markdown(
         """
-        <div id="balloon-container"></div>
+        <div id="balloon-container" style="position: relative; width: 100%; height: 500px; overflow: visible;"></div>
         <script>
+        const container = document.getElementById('balloon-container');
         const colors = ['#FFB6C1', '#FFD1DC', '#E6E6FA', '#FFE4E1', '#FFF0F5']; // pastel colors
         for (let i = 0; i < 30; i++) {
             let balloon = document.createElement('div');
@@ -150,23 +151,25 @@ else:
             balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
             balloon.style.borderRadius = '50%';
             balloon.style.position = 'absolute';
-            balloon.style.left = Math.random() * window.innerWidth + 'px';
-            balloon.style.top = '100%';
-            balloon.style.zIndex = 9999;
+            balloon.style.left = Math.random() * (container.offsetWidth - 30) + 'px';
+            balloon.style.top = container.offsetHeight + 'px';
             balloon.style.opacity = 0.8;
-            balloon.style.animation = 'floatUp 7s linear forwards';
-            document.body.appendChild(balloon);
+            balloon.style.zIndex = 9999;
+            balloon.style.animation = `floatUp 7s linear forwards`;
+            container.appendChild(balloon);
         }
         </script>
         <style>
         @keyframes floatUp {
-            0% { top: 100%; transform: translateY(0); }
-            100% { top: -10%; transform: translateY(-100vh); }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-600px); } /* float above container */
         }
         </style>
         """,
         unsafe_allow_html=True
     )
+    
+
     
     st.markdown("<br><br>", unsafe_allow_html=True)
     
