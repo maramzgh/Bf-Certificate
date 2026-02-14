@@ -9,11 +9,11 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS
+# Custom CSS with light pink background
 st.markdown("""
 <style>
     .main {
-        background: linear-gradient(135deg, #FFB6C1 0%, #E6E6FA 50%, #FFE4E1 100%);
+        background: linear-gradient(135deg, #FFD6E8 0%, #E6E6FA 50%, #FFE4E1 100%);
     }
     
     #MainMenu {visibility: hidden;}
@@ -27,7 +27,7 @@ st.markdown("""
         font-weight: bold;
         border-radius: 35px;
         border: none;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         transition: all 0.3s ease;
         margin: 10px;
     }
@@ -40,7 +40,7 @@ st.markdown("""
         color: #FF69B4;
         text-align: center;
         font-size: 3rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         margin-bottom: 20px;
     }
     
@@ -60,7 +60,7 @@ st.markdown("""
         max-width: 100%;
         height: auto;
         border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -81,7 +81,7 @@ def increment_nope():
     st.session_state.nope_count += 1
     messages = [
         "Nice try! 😏",
-        "Can't escape! 🤍",
+        "Can't escape! 🤍💗",
         "Still trying? 😂",
         "You know you want to click YES! 🤍",
         "Almost there... 😊",
@@ -124,8 +124,8 @@ if not st.session_state.show_certificate:
             st.rerun()
 
 else:
-    st.markdown("# 🎊 CONGRATULATIONS! 🎊")
-    st.markdown("### Here's your award, champion! 🤍")
+    st.markdown("# 💗 CONGRATULATIONS!")
+    st.markdown("### Here's your award nawartyy!💗 ")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -142,7 +142,7 @@ else:
     
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
-        if st.button("🔄 See it again!", key="reset_btn", use_container_width=True):
+        if st.button("🔄 See it again! 🤍", key="reset_btn", use_container_width=True):
             st.session_state.show_certificate = False
             st.session_state.nope_count = 0
             st.rerun()
